@@ -15,9 +15,13 @@ bot.on('ready', () => {
 });
 
 bot.on('messageCreate', async msg => {
-    if (msg.content === 'kayne') {
-      const quote = await getQuote();
-      msg.reply(quote);
+    try{
+      if (msg.content === 'kayne') {
+        const quote = await getQuote();
+        msg.reply(quote);
+      }
+    } catch (error){
+      console.error(error)
     }
   });
 
