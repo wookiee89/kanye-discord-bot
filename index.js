@@ -1,5 +1,7 @@
 require('dotenv').config();
 const axios = require('axios');
+var express = require('express')
+var app = express();
 const fetch = require('node-fetch');
 const Discord = require('discord.js');
 const { message } = require('discordjs-logger');
@@ -8,6 +10,8 @@ const logger = require("discordjs-logger");
 const TOKEN = process.env.TOKEN;
 
 // logger.all(bot);
+
+app.set('port', (process.env.PORT || 1337))
 
 bot.on('ready', () => {
   console.log('Connecteed and ready.');
