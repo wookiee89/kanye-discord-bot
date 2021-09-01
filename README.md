@@ -1,2 +1,2 @@
-# kayne-discord-bot
+# kanye-discord-bot
 Discord bot for outputting Kayne quotes to annoy your friends
