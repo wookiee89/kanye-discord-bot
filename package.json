@@ -1,14 +1,32 @@
 {
+  "name": "kanye-discord-bot",
+  "version": "1.0.0",
+  "description": "kanye quote bot to annoy friends on discord",
+  "main": "index.js",
+  "engines": {
+    "node": "16.x",
+    "npm": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wookiee89/kanye-discord-bot.git"
+  },
+  "keywords": [
+    "heroku",
+    "discord.js",
+    "kanye",
+    "bot"
+  ],
+  "author": "Jay Jain",
+  "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
     "discord.js": "^13.1.0",
     "discordjs-logger": "^2.0.0",
     "dotenv": "^10.0.0"
-  },
-  "scripts": {
-    "start": "node index.js"
-  },
-  "engines": {
-    "node": "16.x"
   }
 }
