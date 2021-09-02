@@ -30,10 +30,13 @@ bot.on('messageCreate', async msg => {
     if (msg.content.includes('kanye')) {
       try{
         const quote = await getQuote();
-        msg.reply(quote);
+        msg.reply(quote, { tts: true });
       } catch (err){
         next(err)
       }
+      msg.channel.send("Meow! I'm a baby loli kitten!", {
+        tts: true
+       })
     }
   }
   );
