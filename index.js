@@ -27,7 +27,7 @@ bot.on('ready', () => {
 });
 
 bot.on('messageCreate', async msg => {
-    if (msg.content === 'kanye') {
+    if (msg.content === '*kanye*') {
       try{
         const quote = await getQuote();
         msg.reply(quote);
