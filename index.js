@@ -4,16 +4,13 @@ var express = require('express')
 var app = express();
 const fetch = require('node-fetch');
 const Discord = require('discord.js');
-const { message } = require('discordjs-logger');
 const bot = new Discord.Client({intents:["GUILD_MESSAGES", "GUILD_MESSAGE_REACTIONS", "GUILDS"]});
 const logger = require("discordjs-logger");
 const TOKEN = process.env.TOKEN;
 
-// logger.all(bot);
-
 app.set('port', (process.env.PORT || 1337))
 
-//For avoidong Heroku $PORT error
+//For avoiding Heroku $PORT error
 app.get('/', function(request, response) {
   var result = 'App is running'
   response.send(result);
@@ -34,9 +31,6 @@ bot.on('messageCreate', async msg => {
       } catch (err){
         next(err)
       }
-      msg.channel.send("Meow! I'm a baby loli kitten!", {
-        tts: true
-       })
     }
   }
   );
